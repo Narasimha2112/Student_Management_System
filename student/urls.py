@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import  settings
-from stuapp.views import index,view_student,add
+from stuapp.views import index,view_student,add,edit,delete
 
 
 urlpatterns = [
@@ -25,6 +25,8 @@ urlpatterns = [
     path('',index,name='index'),
     path('<int:id>',view_student,name='view_student'),
     path('add/',add,name='add'),
+    path('edit/<int:id>/',edit, name='edit'),
+    path('delete/<int:id>/',delete, name='delete'),
 ]
 
 
