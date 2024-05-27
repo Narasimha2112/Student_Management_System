@@ -17,13 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import  settings
-from stuapp.views import index,view_student
+from stuapp.views import index,view_student,add
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
-    path('<int:id>',view_student,name='view_student')
+    path('<int:id>',view_student,name='view_student'),
+    path('add/',add,name='add'),
 ]
 
 
